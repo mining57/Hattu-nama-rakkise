@@ -606,6 +606,149 @@
         }
 
         /* ============================================================
+                   REWARD SECTION — NEW
+                   ============================================================ */
+        .reward-section {
+            background: linear-gradient(145deg, #0a5e2a, #0a4a22);
+            color: #fff;
+            border-radius: var(--radius);
+            padding: 44px 40px;
+            margin: 48px 0 50px;
+            box-shadow: var(--shadow-lg);
+            border: 3px solid var(--gold-accent);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .reward-section::before {
+            content: "💰";
+            font-size: 180px;
+            position: absolute;
+            right: -20px;
+            bottom: -50px;
+            opacity: 0.06;
+            pointer-events: none;
+            transform: rotate(10deg);
+        }
+
+        .reward-section::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 20% 80%, rgba(212, 160, 23, 0.10), transparent 60%);
+            pointer-events: none;
+        }
+
+        .reward-section .reward-inner {
+            position: relative;
+            z-index: 2;
+        }
+
+        .reward-section .reward-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: rgba(255, 255, 255, 0.10);
+            padding: 10px 28px;
+            border-radius: 60px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border: 1.5px solid rgba(212, 160, 23, 0.40);
+            backdrop-filter: blur(4px);
+            margin-bottom: 16px;
+        }
+
+        .reward-section .reward-badge i {
+            color: var(--gold-accent);
+            font-size: 1.4rem;
+        }
+
+        .reward-section h2 {
+            font-size: 2.6rem;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+            color: #fff;
+            margin-bottom: 6px;
+        }
+
+        .reward-section h2 .highlight-gold {
+            color: var(--gold-accent);
+        }
+
+        .reward-section .reward-amount {
+            font-size: 3.2rem;
+            font-weight: 900;
+            color: var(--gold-accent);
+            text-shadow: 0 0 40px rgba(212, 160, 23, 0.25);
+            line-height: 1.2;
+            margin: 4px 0 12px;
+        }
+
+        .reward-section .reward-amount small {
+            font-size: 1.2rem;
+            font-weight: 500;
+            opacity: 0.85;
+            display: block;
+            margin-top: 2px;
+        }
+
+        .reward-section p {
+            font-size: 1.08rem;
+            max-width: 780px;
+            margin: 8px auto 6px;
+            opacity: 0.93;
+            line-height: 1.8;
+        }
+
+        .reward-section .reward-terms {
+            background: rgba(255, 255, 255, 0.06);
+            border-radius: var(--radius-sm);
+            padding: 18px 26px;
+            margin-top: 20px;
+            border-left: 4px solid var(--gold-accent);
+            max-width: 780px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: left;
+        }
+
+        .reward-section .reward-terms strong {
+            color: var(--gold-accent);
+        }
+
+        .reward-section .reward-terms i {
+            color: var(--gold-accent);
+            margin-right: 8px;
+        }
+
+        .reward-section .btn-reward {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: var(--gold-accent);
+            color: #1a2b3c;
+            padding: 16px 44px;
+            border-radius: 60px;
+            font-weight: 700;
+            font-size: 1.15rem;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: all var(--transition);
+            box-shadow: 0 6px 24px rgba(212, 160, 23, 0.30);
+            margin-top: 18px;
+        }
+
+        .reward-section .btn-reward:hover {
+            background: #f0d060;
+            transform: scale(1.04);
+            box-shadow: 0 8px 32px rgba(212, 160, 23, 0.45);
+        }
+
+        /* ============================================================
                    CONDEMNATION
                    ============================================================ */
         .condemn-section {
@@ -653,6 +796,56 @@
 
         .condemn-section .condemn-text p {
             margin-bottom: 10px;
+        }
+
+        /* Rule of Law Demand Box — NEW */
+        .rule-of-law-box {
+            background: #1a2b3c;
+            border-radius: var(--radius-sm);
+            padding: 26px 30px;
+            margin: 24px 0 28px;
+            border-left: 8px solid var(--gold-accent);
+            box-shadow: var(--shadow-sm);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .rule-of-law-box::before {
+            content: "⚖️";
+            font-size: 80px;
+            position: absolute;
+            right: 10px;
+            bottom: -10px;
+            opacity: 0.06;
+            pointer-events: none;
+        }
+
+        .rule-of-law-box h3 {
+            color: #fff;
+            font-size: 1.6rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            flex-wrap: wrap;
+            margin-bottom: 6px;
+        }
+
+        .rule-of-law-box h3 i {
+            color: var(--gold-accent);
+            font-size: 1.8rem;
+        }
+
+        .rule-of-law-box p {
+            color: rgba(255, 255, 255, 0.92);
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin: 4px 0;
+        }
+
+        .rule-of-law-box .highlight-gold {
+            color: var(--gold-accent);
+            font-weight: 700;
         }
 
         .template-box {
@@ -1126,6 +1319,15 @@
             .vision-block {
                 padding: 36px 24px;
             }
+            .reward-section {
+                padding: 32px 24px;
+            }
+            .reward-section h2 {
+                font-size: 2.2rem;
+            }
+            .reward-section .reward-amount {
+                font-size: 2.6rem;
+            }
         }
 
         @media (max-width: 768px) {
@@ -1192,6 +1394,25 @@
             }
             .officials-grid {
                 grid-template-columns: 1fr 1fr;
+            }
+            .reward-section h2 {
+                font-size: 1.8rem;
+            }
+            .reward-section .reward-amount {
+                font-size: 2.2rem;
+            }
+            .reward-section .reward-amount small {
+                font-size: 1rem;
+            }
+            .reward-section .reward-terms {
+                padding: 14px 18px;
+                font-size: 0.95rem;
+            }
+            .rule-of-law-box h3 {
+                font-size: 1.3rem;
+            }
+            .rule-of-law-box p {
+                font-size: 1rem;
             }
         }
 
@@ -1315,6 +1536,35 @@
                 bottom: 20px;
                 right: 20px;
             }
+            .reward-section {
+                padding: 24px 16px;
+            }
+            .reward-section h2 {
+                font-size: 1.4rem;
+            }
+            .reward-section .reward-amount {
+                font-size: 1.8rem;
+            }
+            .reward-section .reward-amount small {
+                font-size: 0.85rem;
+            }
+            .reward-section .reward-badge {
+                font-size: 0.9rem;
+                padding: 6px 18px;
+            }
+            .reward-section .btn-reward {
+                padding: 12px 28px;
+                font-size: 1rem;
+            }
+            .rule-of-law-box {
+                padding: 18px 16px;
+            }
+            .rule-of-law-box h3 {
+                font-size: 1.1rem;
+            }
+            .rule-of-law-box p {
+                font-size: 0.92rem;
+            }
         }
 
         @media (max-width: 380px) {
@@ -1348,6 +1598,7 @@
                 <li><a href="#hero" class="active" data-nav-om="Mana" data-nav-am="መነሻ" data-nav-en="Home">Mana</a></li>
                 <li><a href="#accusation" data-nav-om="Himannaa" data-nav-am="ክሱ" data-nav-en="Accusation">Himannaa</a></li>
                 <li><a href="#condemn" data-nav-om="Balaaleffannaa" data-nav-am="ውግዘት" data-nav-en="Condemn">Balaaleffannaa</a></li>
+                <li><a href="#reward" data-nav-om="Badhaasa" data-nav-am="ሽልማት" data-nav-en="Reward">Badhaasa</a></li>
                 <li><a href="#report" data-nav-om="Gabaasaa" data-nav-am="ሪፖርት" data-nav-en="Report">Gabaasaa</a></li>
                 <li><a href="#form" data-nav-om="Ergaa" data-nav-am="አስገባ" data-nav-en="Submit">Ergaa</a></li>
                 <li><a href="#contact" data-nav-om="Qunnama" data-nav-am="አግኙን" data-nav-en="Contact">Qunnama</a></li>
@@ -1374,6 +1625,7 @@
         <a href="#hero" data-nav-om="Mana" data-nav-am="መነሻ" data-nav-en="Home">Mana</a>
         <a href="#accusation" data-nav-om="Himannaa" data-nav-am="ክሱ" data-nav-en="Accusation">Himannaa</a>
         <a href="#condemn" data-nav-om="Balaaleffannaa" data-nav-am="ውግዘት" data-nav-en="Condemn">Balaaleffannaa</a>
+        <a href="#reward" data-nav-om="Badhaasa" data-nav-am="ሽልማት" data-nav-en="Reward">Badhaasa</a>
         <a href="#report" data-nav-om="Gabaasaa" data-nav-am="ሪፖርት" data-nav-en="Report">Gabaasaa</a>
         <a href="#form" data-nav-om="Ergaa" data-nav-am="አስገባ" data-nav-en="Submit">Ergaa</a>
         <a href="#contact" data-nav-om="Qunnama" data-nav-am="አግኙን" data-nav-en="Contact">Qunnama</a>
@@ -1536,6 +1788,41 @@ MAIN
 </div>
 </section>
 
+<!-- ==================== REWARD SECTION — NEW ==================== -->
+<section id="reward" class="reward-section">
+    <div class="reward-inner">
+        <div class="reward-badge">
+            <i class="fas fa-award"></i>
+            <span id="reward-badge-text" data-om="Komishinii Farra-Malaammaltummaa" data-am="ፀረ-ሙስና ኮሚሽን" data-en="Anti-Corruption Commission">Komishinii Farra-Malaammaltummaa</span>
+        </div>
+        <h2 id="reward-head" data-om="Badhaasa Odeeffannoo Dabalataaf" data-am="ለተጨማሪ መረጃ ሽልማት" data-en="Reward for Additional Information">Badhaasa Odeeffannoo Dabalataaf</h2>
+        <div class="reward-amount" id="reward-amount"> Birrii
+            3,000,000 <small>ETB</small>
+        </div>
+        <p id="reward-desc"
+        data-om="Nuti, Komishinii Farra-Malaammaltummaa, badhaasa <strong class='highlight-gold'>Birrii 3,000,000 ETB</strong> ( Qarshii milyoona sadii) kennuuf qophii xumurreerraa. namni odeeffannoo dabalataa fi sirrii ta'e waa'ee <strong class='highlight-gold'>Negaash Bulaalaa</strong> fi obboleessa isaa <strong class='highlight-gold'>Addisuu Bullallaa</strong> nuuf kenne ni badhaafama jechuudha. Odeeffannoon keessan haqa mirkaneessuu fi saamichoota kana itti gaafatamummaa jala oolchuuf gargaara."
+        data-am="እኛ ፀረ-ሙስና ኮሚሽን ስለ <strong class='highlight-gold'>ነጋሽ ቡላላ</strong> እና ወንድሙ <strong class='highlight-gold'>አዲሱ ቡላላ</strong> ተጨማሪ እና ትክክለኛ መረጃ ለሚሰጥ ማንኛውም ሰው <strong class='highlight-gold'>3,000,000 ብር</strong> (ሶስት ሚሊዮን ብር) ሽልማት እንሰጣለን። መረጃዎ ፍትህን ለማረጋገጥ እና እነዚህን ሌቦች ተጠያቂ ለማድረግ ይረዳል።"
+        data-en="We, the Anti-Corruption Commission, offer a reward of <strong class='highlight-gold'>Birrii 3,000,000 ETB</strong> (three million birr) to anyone who provides additional and correct information about <strong class='highlight-gold'>Negash Bulala</strong> and his brother <strong class='highlight-gold'>Adisu Bulala</strong>. Your information will help ensure justice and hold these thieves accountable.">
+        Nuti, Komishinii Farra-Malaammaltummaa, badhaasa <strong class="highlight-gold"> Birrii 3,000,000 ETB</strong> (saadaan milyoona sadii) kenna nama odeeffannoo dabalataa fi sirrii ta'e waa'ee <strong class="highlight-gold">Negaash Bulaalaa</strong> fi obboleessa isaa <strong class="highlight-gold">Addisuu Bullallaa</strong> kennuuf. Odeeffannoon keessan haqa mirkaneessuu fi saamichoota kana itti gaafatamummaa jala oolchuuf gargaara.
+    </p>
+    <div class="reward-terms" id="reward-terms">
+        <p style="margin:0; color:rgba(255,255,255,0.92);">
+            <i class="fas fa-shield-alt"></i>
+            <span id="reward-terms-text"
+            data-om="Eenyummaan keessan dhokfamaadha. Odeeffannoon sirrii fi mirkanaa'aa ta'uu qaba. Badhaasni erga odeeffannoon mirkanaa'ee booda kennama."
+            data-am="ማንነትዎ ተጠብቆ ይቆያል። መረጃው ትክክለኛ እና ሊረጋገጥ የሚችል መሆን አለበት። ሽልማቱ መረጃው ከተረጋገጠ በኋላ ይሰጣል።"
+            data-en="Your identity will be protected. The information must be correct and verifiable. The reward will be given after the information is confirmed.">
+            Eenyummaan keessan dhokfamaadha. Odeeffannoon sirrii fi mirkanaa'aa ta'uu qaba. Badhaasni erga odeeffannoon mirkanaa'ee booda kennama.
+        </span>
+    </p>
+</div>
+<a href="#form" class="btn-reward">
+    <i class="fas fa-paper-plane"></i>
+    <span id="reward-btn-text" data-om="Odeeffannoo keessan Ergaa" data-am="መረጃዎን ያስገቡ" data-en="Submit Your Information">Odeeffannoo keessan Ergaa</span>
+</a>
+</div>
+</section>
+
 <!-- ==================== CONDEMNATION ==================== -->
 <section id="condemn" class="condemn-section">
     <h2 id="condemn-head" data-om="Balaaleffannaa fi Hatattamaan Aangoo irraa akka innii Ka'u Gaafachuu" data-am="ውግዘት እና በአስቸኳይ ከስልጣን መነሳትን መጠየቅ" data-en="Demand Condemnation & Immediate Removal">
@@ -1555,6 +1842,20 @@ MAIN
     data-en="We demand his immediate suspension, thorough investigation, and prosecution. We demand the release of all innocent youth jailed for the Abulo gemstone. We call upon the Oromia Anti-Corruption Commission, President Shimelis Abdisa, the Prosperity Party leadership, and the Prime Minister's office to issue a public condemnation of his actions and restore the rule of law.">
     Hatattamaan akka hojiirraa dhaabbatu, qoratamu, fi himatamu ni gaafanna. Dargaggootni Abuloo dhagaa gatii jabaaf hidhaman hundi akka hiikaman ni gaafanna. Komishinii Farra-Malaammaltummaa Oromiyaa, Pireezidanti Shimallis Abdiisaa, hooggansa Paartii badhaadhinaa fi Waajjirri Ministira Muummee gocha isaa akka balaaleffatan fi seera deebisan ni gaafanna.
 </p>
+
+<!-- ====== RULE OF LAW DEMAND — NEW ====== -->
+<div class="rule-of-law-box" id="rule-of-law">
+    <h3>
+        <i class="fas fa-gavel"></i>
+        <span id="rule-law-head" data-om="Negaash Bulaalaa fi Addisuu Bullallaa — Seeraan Qoratamuu fi To'atamuu Qabu!" data-am="ነጋሽ ቡላላ እና አዲሱ ቡላላ — በህግ መመርመር እና መቆጣጠር አለባቸው!" data-en="Negash Bulala and Adisu Bulala — Must Be Investigated and Controlled by Law!">Negaash Bulaalaa fi Addisuu Bullallaa — Seeraan Qoratamuu ykn gaafatamuu fi To'atamuu Qabu!
+    </h3>
+    <p id="rule-law-body"
+    data-om="Nuti ciminaan <span class='highlight-gold'>Negaash Bulaalaa</span> fi obboleessa isaa <span class='highlight-gold'>Addisuu Bullallaa</span> seeraan gadi fageenyaan qoratamuu fi to'atamuu akka qaban ni gaafanna. Ol'aantummi seeraa tokko malee nama al'aanaa ta'e  hin qabnu. Malaammaltummaa fi saamtoti kana jalaa hin ba'an. Ammaa qorannoon irratti gaggeeffamuu qaba. Aangoon seeraan ala fayyadaman akka dhaaban fi seerri akka ol'aanaa ta'u mirkaneessuuf ni dhaabbanna."
+    data-am="በጽኑ መልኩ <span class='highlight-gold'>ነጋሽ ቡላላ</span> እና ወንድሙ <span class='highlight-gold'>አዲሱ ቡላላ</span> በህግ ጥልቅ ምርመራ እና ቁጥጥር እንዲደረግባቸው እንጠይቃለን። ከህግ የበላይነት በቀር ሌላ አልናቀብም። ሙስና እና ዘረፋ አይፈቀዱም። የተዘረፈው የህዝብ ሀብት እንዲመለስ እንፈልጋለን። በህገ-ወጥ መንገድ ስልጣን የተጠቀሙ እንዲቆሙ እና ህግ የበላይ እንዲሆን እንቆማለን።"
+    data-en="We firmly demand that <span class='highlight-gold'>Negash Bulala</span> and his brother <span class='highlight-gold'>Adisu Bulala</span> be thoroughly investigated and controlled by the rule of law. We accept no authority above the law. Corruption and theft will not be tolerated. We demand the return of the stolen public resources. We stand to ensure that those who abuse power are stopped and that the law prevails.">
+    Nuti ciminaan <span class="highlight-gold">Negaash Bulaalaa</span> fi obboleessa isaa <span class="highlight-gold">Addisuu Bullallaa</span> seeraan gadi fageenyaan qoratamuu fi to'atamuu akka qaban ni gaafanna. Ol'aantummi seeraa tokko malee nama al'aanaa ta'e  hin qabnu. Malaammaltummaa fi saamtoti kana jalaa hin ba'an. Ammaa qorannoon irratti gaggeeffamuu qaba. Aangoon seeraan ala fayyadaman akka dhaaban fi seerri akka ol'aanaa ta'u mirkaneessuuf ni dhaabbanna.
+</p>
+</div>
 </div>
 
 <!-- Template Box -->
@@ -1619,10 +1920,10 @@ Ergaa kana miidiyaa hawaasummaa irratti, walgahii uummataa keessatti fi waajjira
         <h4 id="off-1-name" data-om="Farra-Malaammaltummaa Oromiyaa" data-am="የኦሮሚያ ፀረ-ሙስና" data-en="Oromia Anti-Corruption">Farra-Malaammaltummaa Oromiyaa</h4>
         <div class="title" id="off-1-title" data-om="Komishinii Naamusaa fi Farra-Malaammaltummaa" data-am="የስነ-ምግባር እና ፀረ-ሙስና ኮሚሽን" data-en="Ethics & Anti-Corruption Commission">Komishinii Naamusaa fi Farra-Malaammaltummaa</div>
         <div class="desc" id="off-1-desc"
-        data-om="Malaammaltummaa kallattiin komishinii naannoo dhimma dantaa dhuunfaa qoratuuf gabaasaa."
+        data-om="Malaammaltummaa kallattiin komishinii naannoo dhimma faayidaa dhuunfaa qoratuuf gabaasaa."
         data-am="የስልጣን አላግባብ መጠቀምን ለሚያጠናው የክልሉ ኮሚሽን ሙስናን በቀጥታ ሪፖርት ያድርጉ።"
         data-en="Report corruption directly to the regional commission responsible for investigating abuses of power.">
-        Malaammaltummaa kallattiin komishinii naannoo dhimma dantaa dhuunfaa qoratuuf gabaasaa.
+        Malaammaltummaa kallattiin komishinii naannoo dhimma faayidaa dhuunfaa qoratuuf gabaasaa.
     </div>
     <a href="mailto:oeaccorg@ethio.net.et" class="btn">
         <i class="fas fa-envelope"></i> Email
@@ -1941,7 +2242,7 @@ JAVASCRIPT
     // ==========================================
     // ACTIVE NAV LINK ON SCROLL (desktop)
     // ==========================================
-    const sections = document.querySelectorAll('section[id], .vision-block[id], .condemn-section[id], .final-cta[id]');
+    const sections = document.querySelectorAll('section[id], .vision-block[id], .condemn-section[id], .final-cta[id], .reward-section[id]');
     const navLinks = document.querySelectorAll('.nav-links a');
 
     function updateActiveLink() {
